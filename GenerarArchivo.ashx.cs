@@ -22,7 +22,7 @@
             context.Response.ContentType = "application/json";
             if (informacionArchivo != null)
             {
-                context.Session["ArchivoGenerado"] = $"/Archivos/{informacionArchivo.Name}";
+                context.Session["ArchivoGenerado"] = $"Archivos/{informacionArchivo.Name}";
                 context.Response.Write("true");
             }
             else

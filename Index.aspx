@@ -19,10 +19,10 @@
             // Llama al manejador que genera el archivo y guarda su ruta en una variable de sesión para habilitar la descarga.
             $("#generar").click(function () {
                 $.ajax({
-                    url: "/GenerarArchivo.ashx",
+                    url: "GenerarArchivo.ashx",
                     success: function(resultado) {
                         if (resultado) {
-                            $("#enlace").prepend("<a href='/DescargarArchivo.ashx' class='enlaceDescarga'>Descargar (este enlace sólo puede ser usado una vez)</a>");
+                            $("#enlace").prepend("<a href='DescargarArchivo.ashx' class='enlaceDescarga'>Descargar (este enlace sólo puede ser usado una vez)</a>");
                         } else {
                             alert("Ocurrió un error generando el archivo.");
                         }
